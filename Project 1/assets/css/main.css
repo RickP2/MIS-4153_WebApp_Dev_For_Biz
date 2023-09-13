@@ -198,6 +198,7 @@ input, select, textarea {
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
+		color: #b9baa8;
 	}
 
 	code {
@@ -3503,7 +3504,7 @@ input, select, textarea {
 			}
 
 				#banner .content header h2 {
-					font-size: 2.5em;
+					font-size: 5em;
 					margin: 0;
 				}
 
