@@ -196,9 +196,10 @@ input, select, textarea {
 	blockquote {
 		border-left: solid 4px rgba(255, 255, 255, 0.3);
 		font-style: italic;
+		font-size: large;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
-		color: #b9baa8;
+		color: #27af54;
 	}
 
 	code {
@@ -3454,7 +3455,7 @@ input, select, textarea {
 
 	#banner {
 		background-attachment: fixed;
-		background-color: #273330;
+		/* background-color: #273330; */
 		background-image: url("../../images/eyes.jpg");
 		background-position: center center;
 		background-size: cover;
