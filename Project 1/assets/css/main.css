@@ -39,6 +39,7 @@ ol, ul {
 
 blockquote, q {
 	quotes: none;
+	
 }
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -149,6 +150,7 @@ input, select, textarea {
 		font-size: 2em;
 		line-height: 1.5em;
 		letter-spacing: -0.025em;
+		color: #27af54;
 	}
 
 	h3 {
