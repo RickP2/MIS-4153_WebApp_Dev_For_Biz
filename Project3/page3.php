@@ -1,3 +1,31 @@
+<?php
+		$id= 4924;
+		$curl = curl_init();
+
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "http://faber.ecu.edu/intra/drakejo/project3/addressAPI.php?id=" . $id,
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_HTTPHEADER => "Accept: application/json",
+			CURLOPT_SSL_VERIFYHOST => false,
+			CURLOPT_SSL_VERIFYPEER => false,
+		]);
+
+		$zip_info = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			// echo $response;
+			$addressInfo = json_decode($zip_info, true);
+			//print_r($addressInfo['Zip']);
+			$zipcode = $addressInfo['Zip'];
+			
+		}
+?>
+
 <!DOCTYPE HTML>
 <!--
 	Strongly Typed by HTML5 UP
@@ -6,7 +34,7 @@
 -->
 <html>
 	<head>
-		<title>Project 3: Part 1</title>
+		<title>Project 3: Part 3</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,7 +53,7 @@
 						<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a class="icon solid fa-home" href="page2.php"><span>Page 2</span></a></li>
+								<li><a class="icon solid fa-home" href="page1.php"><span>Back to Page 1</span></a></li>
 							</ul>
 						</nav>
 
@@ -43,11 +71,11 @@
 								<!-- Feature -->
 									<section>
 										<header>
-											<h3>Project 3 First Part</h3>
+											<h3>Project 3 Third Part</h3>
 										</header>
 									</section>
 									<?php
-										$zipcode = 27616;
+										
 										$curl = curl_init();
 
 										curl_setopt_array($curl, [

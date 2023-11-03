@@ -1,3 +1,35 @@
+<?php
+
+		//1. Connect to database: mysqli_connect()
+		$location ="localhost";
+		$DBUsername ="MIS4153";
+		$DBPassword ="pirates4thewin";
+		$DBName ="mis4153";
+
+		$con = mysqli_connect($location, $DBUsername, $DBPassword, $DBName);
+		if(mysqli_connect_errno()){
+			printf("Connect failed: %\n",mysqli_connect_error());
+		} else {
+
+
+		//2. Send query to database: mysqli_query()
+		//echo "Great success!";
+		$sql = "SELECT Zip FROM vendoraddresses WHERE ID='4924'";
+		$result = mysqli_query($con, $sql);
+		// 	or mysqli_fetch_assoc()
+
+		$row = mysqli_fetch_assoc($result);
+		$zipcode = $row['Zip'];	
+			echo "  The ID used to grab the zipcode is 4924 and the resulting zipcode is: " . $zipcode;
+			
+		//4. Release returned data: mysqli_free_result()
+			mysqli_free_result($result);
+			
+		}
+		//5. Close database connection: mysqli_close()
+		mysqli_close($con);
+
+?>
 <!DOCTYPE HTML>
 <!--
 	Strongly Typed by HTML5 UP
@@ -6,7 +38,7 @@
 -->
 <html>
 	<head>
-		<title>Project 3: Part 1</title>
+		<title>Project 3: Part 2</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,7 +57,7 @@
 						<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a class="icon solid fa-home" href="page2.php"><span>Page 2</span></a></li>
+								<li><a class="icon solid fa-home" href="page3.php"><span>Page 3</span></a></li>
 							</ul>
 						</nav>
 
@@ -43,11 +75,11 @@
 								<!-- Feature -->
 									<section>
 										<header>
-											<h3>Project 3 First Part</h3>
+											<h3>Project 3 Second Part</h3>
 										</header>
 									</section>
 									<?php
-										$zipcode = 27616;
+										
 										$curl = curl_init();
 
 										curl_setopt_array($curl, [

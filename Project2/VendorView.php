@@ -118,7 +118,7 @@ $username = $_SESSION["username"];
 								echo "         " . $previousVendor["City"] .", ". $previousVendor["State"] ." ". $previousVendor["Zip"] . "<br>";
 								echo "Phone Number: " . $previousVendor["Phone"] . "<br>";
 								echo "e-mail: " . $previousVendor["Email"] . "<br>";
-								echo "Notes: " . $previousVendor["Comment"] . "<br>";
+								echo "Notes: " . $previousVendor["ID"] . "<br>";
 
 							//4. Release returned data: mysqli_free_result()
 							mysqli_free_result($VendorArray);

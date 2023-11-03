@@ -1,3 +1,32 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$username = $_POST["username"];
+$pwd = $_POST["pwd"];
+$email = $_POST["email"];
+
+try {
+require_once "/includes/dbh.inc.php";
+
+$query = "INSERT INTO users (username, pwd, email) VALUES
+(:username, :pwd, :email);";
+
+$stmt = $pdo->prepare($query);
+
+$stmt->execute();
+
+}
+$pdo = null;
+$stmt = null;
+header("Location: .. /index.php");
+die();
+} catch (PDOException $e) {
+die("Query failed: " . $e->getMessage());
+} else {
+header("Location: .. /index.php");
+}
+
+?>
 <!DOCTYPE HTML>
 <!--
 	Strongly Typed by HTML5 UP
@@ -25,7 +54,7 @@
 						<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a class="icon solid fa-home" href="page2.php"><span>Page 2</span></a></li>
+								<li><a class="icon solid fa-home" href="index.php"><span>Input</span></a></li>
 							</ul>
 						</nav>
 
