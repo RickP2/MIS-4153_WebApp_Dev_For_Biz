@@ -1660,6 +1660,7 @@ input, select, textarea {
 		color: #888;
 		display: block;
 		margin: 0 0 1em 0;
+		background-color: lightgreen;
 	}
 
 	form input[type="text"],

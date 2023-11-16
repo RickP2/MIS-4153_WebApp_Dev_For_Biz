@@ -53,7 +53,8 @@
 						<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a class="icon solid fa-home" href="page1.php"><span>Back to Page 1</span></a></li>
+								<li><a class="icon solid fa-home" href="page4.php"><span>Bonus: Page 4</span></a></li><br>
+								<li>It will take a couple seconds to load the page.</li>
 							</ul>
 						</nav>
 

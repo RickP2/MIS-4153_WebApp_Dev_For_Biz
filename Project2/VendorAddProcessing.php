@@ -115,7 +115,8 @@ $username = $_SESSION["username"];
 
 							//2. Send query to database: mysqli_query()
 							//echo "Great success!";
-							$sql = "INSERT INTO vendoraddresses (Company, SalesRep, Address1, Address2, City, State, Zip, Phone, Email, Comment, pirateID) VALUES ('$company', '$salesRep', '$address1', '$address2', '$city', '$state', '$zip', '$phone', '$email', '$notes', '$username');";
+							$sql = "INSERT INTO vendoraddresses (Company, SalesRep, Address1, Address2, City, State, Zip, Phone, Email, Comment, pirateID) 
+							VALUES ('$company', '$salesRep', '$address1', '$address2', '$city', '$state', '$zip', '$phone', '$email', '$notes', '$username');";
 							mysqli_query($con,$sql);
 							$lastID = mysqli_insert_ID($con);
 
