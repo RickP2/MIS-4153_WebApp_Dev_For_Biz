@@ -39,6 +39,7 @@ ol, ul {
 
 blockquote, q {
 	quotes: none;
+	
 }
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -149,6 +150,7 @@ input, select, textarea {
 		font-size: 2em;
 		line-height: 1.5em;
 		letter-spacing: -0.025em;
+		color: #27af54;
 	}
 
 	h3 {
@@ -196,8 +198,10 @@ input, select, textarea {
 	blockquote {
 		border-left: solid 4px rgba(255, 255, 255, 0.3);
 		font-style: italic;
+		font-size: large;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
+		color: #27af54;
 	}
 
 	code {
@@ -620,6 +624,7 @@ input, select, textarea {
 			animation: none !important;
 			opacity: 1;
 			z-index: 100000;
+			
 		}
 
 	@media (-webkit-min-device-pixel-ratio: 2) {
@@ -1007,7 +1012,7 @@ input, select, textarea {
 					margin-left: 41.66667%;
 				}
 
-				.row > .col-6-xlarge {
+				.row > .-xcol-6large {
 					width: 50%;
 				}
 
@@ -3452,8 +3457,8 @@ input, select, textarea {
 
 	#banner {
 		background-attachment: fixed;
-		background-color: #273330;
-		background-image: url("../../images/DarkPurple.jpg");
+		/* background-color: #273330; */
+		background-image: url("../../images/eyes.jpg");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -3502,7 +3507,7 @@ input, select, textarea {
 			}
 
 				#banner .content header h2 {
-					font-size: 2.5em;
+					font-size: 5em;
 					margin: 0;
 				}
 
